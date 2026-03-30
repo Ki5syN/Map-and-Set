@@ -10,13 +10,13 @@ test('should sum', () => {
   expect(result).toBe(6);
 });
 
-test('test add double characters ', () => {
+test('add double characters', () => {
   const bestTeam  = new Team;
   bestTeam.add('warrior')
   expect(() => bestTeam.add('warrior')).toThrow('Этот персоонаж уже был выбран') 
 })
 
-test('test add a new character', () => {
+test('add a new character', () => {
   const bestTeam  = new Team;
   bestTeam.add('warrior')
   expect(bestTeam.members.has('warrior')).toBe(true)
@@ -24,7 +24,7 @@ test('test add a new character', () => {
 })
 
 
-test('test add an array of  unique heroes', () => {
+test('add an array of  unique heroes', () => {
   const bestTeam  = new Team;
   const characters = ['Superman',
                       'Batman',
@@ -36,7 +36,7 @@ test('test add an array of  unique heroes', () => {
   expect(bestTeam.members.size).toBe(5)
 })
 
-test('test is set Array ',()=> {
+test('is set Array',()=> {
   const bestTeam  = new Team;
   const characters = ['Superman',
                       'Batman',
@@ -48,13 +48,13 @@ test('test is set Array ',()=> {
   expect(Array.isArray(arr)).toBe(true)
 })
 
-test ('test create & translate  errorInformation', () => {
+test ('create & translate  errorInformation', () => {
   const error = new ErrorRepository;
   error.addError('404','page not found')
   expect(error.translate('404')).toBe('page not found')
 })
 
-test ('test check translate', () => {
+test ('check translate', () => {
   const error = new ErrorRepository;
   error.addError('404','page not found')
   expect(error.translate('403')).toBe('Unknown error')

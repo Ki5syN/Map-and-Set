@@ -6,7 +6,7 @@ export default class Team {
     add(character){
         if(this.members.has(character)){
             throw Error ('Этот персоонаж уже был выбран')
-        };
+        }
         this.members.add(character)
     }
 
